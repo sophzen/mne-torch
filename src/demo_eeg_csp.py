@@ -1,5 +1,6 @@
 # Authors: Alexandre Gramfort <alexandre.gramfort@inria.fr>
 #          Jean-Rémi KING <jeanremi.king@gmail.com>
+#          Alberto Barradas <barradaschacon@tugraz.at>
 #
 # License: BSD Style.
 
@@ -135,8 +136,9 @@ class CommonSpatialFilterModel(nn.Module):
         x = F.log_softmax(x, dim=1)
         return x
 
-# device = 'cuda'
-device = 'cpu'
+device = torch.device('cuda' if torch.cuda.is_available() else 'cpu')
+print('Using device:', device)
+
 n_components = 30
 model = CommonSpatialFilterModel(spatial_dim=epochs_data.shape[1],
                                  n_components=n_components)

@@ -2,6 +2,7 @@
 #          Stanislas Chambon <stan.chambon@gmail.com>
 #          Jean-Rémi KING <jeanremi.king@gmail.com>
 #          Joan Massich <mailsik@gmail.com>
+#          Alberto Barradas <barradaschacon@tugraz.at>
 #
 # License: BSD Style.
 
@@ -17,11 +18,13 @@ from joblib import Memory
 
 subjects = [0, 1]
 n_groups = 1  # keep 1 subject out
-device = 'cpu'
 
 subjects = range(20)
 n_groups = 5  # keep 5 subjects out
-device = 'cuda'
+
+# Select device
+device = torch.device('cuda' if torch.cuda.is_available() else 'cpu')
+print('Using device:', device)
 
 files = fetch_data(subjects=subjects, recording=[1])
 
