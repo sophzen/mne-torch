@@ -27,7 +27,7 @@ Desirable features without a timeline:
 
 Standard setup: `pip install -r requirements.txt`
 
-To use notebooks use `requirements.txt`
+To use notebooks use `requirements-lab.txt`
 
 ### Docker
 Run demos
