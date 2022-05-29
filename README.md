@@ -39,3 +39,7 @@ sudo docker run -it --rm --mount type=bind,source="$(pwd)",target=/workspace mne
 ```
 
 Add `--gpus all` for gpu under nvidia-docker.
+
+
+Run jupyter notebook with docker
+`sudo docker run -it --rm --gpus all -p 8889:8888 --mount type=bind,source="$(pwd)",target=/workspace mne-torch jupyter notebook --ip 0.0.0.0 --no-browser --allow-root`
