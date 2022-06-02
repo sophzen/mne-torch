@@ -74,7 +74,7 @@ pandocfilters==1.5.0
 parso==0.8.3
 pexpect @ file:///tmp/build/80754af9/pexpect_1605563209008/work
 pickleshare @ file:///tmp/build/80754af9/pickleshare_1606932040724/work
-Pillow==9.1.0
+Pillow==9.1.1
 pkginfo==1.7.0
 pooch==1.6.0
 prometheus-client==0.14.1
